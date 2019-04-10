@@ -7,12 +7,6 @@
   
     <url>
     
-      <loc>https://kuaiwenwu.github.io/</loc>
-      <priority>0</priority>
-    </url>
-  
-    <url>
-    
       <loc>https://kuaiwenwu.github.io/authors/</loc>
       <priority>0</priority>
     </url>
@@ -59,6 +53,12 @@
     <url>
     
       <loc>https://kuaiwenwu.github.io/authors/admin/</loc>
+      <priority>0</priority>
+    </url>
+  
+    <url>
+    
+      <loc>https://kuaiwenwu.github.io/</loc>
       <priority>0</priority>
     </url>
   
