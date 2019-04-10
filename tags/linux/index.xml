@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 蒯文武的博客</title>
-    <link>https://kuaiwenwu.github.io/post/</link>
-    <description>Recent content in Posts on 蒯文武的博客</description>
+    <title>linux on 蒯文武的博客</title>
+    <link>https://kuaiwenwu.github.io/tags/linux/</link>
+    <description>Recent content in linux on 蒯文武的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <copyright>版权所有，禁止转载必须注明出处！</copyright>
     <lastBuildDate>Wed, 10 Apr 2019 11:40:26 +0800</lastBuildDate>
     
-	<atom:link href="https://kuaiwenwu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kuaiwenwu.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,27 +18,6 @@
       <pubDate>Wed, 10 Apr 2019 11:40:26 +0800</pubDate>
       
       <guid>https://kuaiwenwu.github.io/post/two-post/</guid>
-      <description>一、准备工作 1. 简介 OpenKM是一个开放源代码的电子文档管理系统，它的特点是可用于大型公司或是中小企&amp;gt;业， 适应性比较强。 并且在知识管理方面的加工，提供了更加灵活和成本较低的替代应用。
-2. 安装Jdk 官网下载jdk1.8最新的版本jdk-8u151-linux-x64.tar.gz包体
-解压jdk-8u151-linux-x64.tar.gz到/usr/local/目录下
-Tar xf /opt/soft/jdk-8u151-linux-x64.tar.gz –C /usr/local  配置jdk的环境变量，修改/etc/profile，
-Vim /etc/profile : export JAVA\_HOME=/usr/local/jdk1.8.0\_151 export JRE\_HOME=$JAVA\_HOME/jre export CLASSPATH=.:$JAVA\_HOME/lib:$JRE\_HOME/lib export PATH=$JAVA_HOME/bin:$PATH  加载一下环境变量
-#source /etc/profile  验证环境变量是否可以
-# Java –version  二、安装
-1. 安装OpenKM 安装完Java后，只需要下载一个2.9MB的OKMInstaller.jar就可以部署在服务器自动配置和下载Tomcat和OpenKM以及相关的依赖和工具。
-下载OKMInstaller.jar命令
-wget [https://sourceforge.net/projects/openkm/files/common/OKMInstaller.jar]  2. 创建数据库用户openkm useradd openkm  3. 安装MariaDB数据库 yum install mariadb-server  设置成开机启动并开启MariaDB:
-systemctl enable mariadb systemctl start mariadb  OpenKM支持的数据库类型主要有以下：
-MariaDB (mariadb)
-MySQL (mysql)</description>
-    </item>
-    
-    <item>
-      <title>Openkm文档系统安装部署</title>
-      <link>https://kuaiwenwu.github.io/post/openkm/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kuaiwenwu.github.io/post/openkm/</guid>
       <description>一、准备工作 1. 简介 OpenKM是一个开放源代码的电子文档管理系统，它的特点是可用于大型公司或是中小企&amp;gt;业， 适应性比较强。 并且在知识管理方面的加工，提供了更加灵活和成本较低的替代应用。
 2. 安装Jdk 官网下载jdk1.8最新的版本jdk-8u151-linux-x64.tar.gz包体
 解压jdk-8u151-linux-x64.tar.gz到/usr/local/目录下
