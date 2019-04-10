@@ -9,6 +9,20 @@
   
     <url>
     
+      <loc>https://kuaiwenwu.github.io/tags/linux/</loc>
+      <lastmod>2019-04-10T11:40:26+08:00</lastmod>
+      <priority>0</priority>
+    </url>
+  
+    <url>
+    
+      <loc>https://kuaiwenwu.github.io/tags/openkm/</loc>
+      <lastmod>2019-04-10T11:40:26+08:00</lastmod>
+      <priority>0</priority>
+    </url>
+  
+    <url>
+    
       <loc>https://kuaiwenwu.github.io/post/openkm/</loc>
       <lastmod>2019-04-10T11:40:26+08:00</lastmod>
     </url>
@@ -22,20 +36,6 @@
     <url>
     
       <loc>https://kuaiwenwu.github.io/tags/</loc>
-      <lastmod>2019-04-10T11:40:26+08:00</lastmod>
-      <priority>0</priority>
-    </url>
-  
-    <url>
-    
-      <loc>https://kuaiwenwu.github.io/tags/linux/</loc>
-      <lastmod>2019-04-10T11:40:26+08:00</lastmod>
-      <priority>0</priority>
-    </url>
-  
-    <url>
-    
-      <loc>https://kuaiwenwu.github.io/tags/openkm/</loc>
       <lastmod>2019-04-10T11:40:26+08:00</lastmod>
       <priority>0</priority>
     </url>

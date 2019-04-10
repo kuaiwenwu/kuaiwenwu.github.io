@@ -10,7 +10,7 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Openkm文档系统安装部署</title>
+      <title>OpenKm文档系统安装部署</title>
       <link>https://kuaiwenwu.github.io/post/openkm/</link>
       <pubDate>Wed, 10 Apr 2019 11:40:26 +0800</pubDate>
       
@@ -21,7 +21,7 @@
 
 &lt;h2 id=&#34;1-简介&#34;&gt;1. 简介&lt;/h2&gt;
 
-&lt;p&gt;OpenKM是一个开放源代码的电子文档管理系统，它的特点是可用于大型公司或是中小企&amp;gt;业， 适应性比较强。 并且在知识管理方面的加工，提供了更加灵活和成本较低的替代应用。&lt;/p&gt;
+&lt;p&gt;OpenKM是一个开放源代码的电子文档管理系统，它的特点是可用于大型公司或是中小企业， 适应性比较强。 并且在知识管理方面的加工，提供了更加灵活和成本较低的替代应用。&lt;/p&gt;
 
 &lt;h2 id=&#34;2-安装jdk&#34;&gt;2. 安装Jdk&lt;/h2&gt;
 
