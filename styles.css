@@ -495,7 +495,7 @@ a[data-fancybox] img {
 }
 
 .home-section {
-  background-color: #FFD700;
+  background-color: rgb(255,243,208);
   padding: 110px 0 110px 0;
   animation: intro 0.3s both;
   animation-delay: 0.15s;
@@ -545,7 +545,7 @@ a[data-fancybox] img {
 
 .home-section:nth-of-type(even) {
   /*background-color: rgb(247, 247, 247);*/
-  background-color: #ffc10730
+  background-color: rgb(255,243,208);
 }
 
 .dark .home-section {
