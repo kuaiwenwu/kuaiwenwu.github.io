@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>学习笔记 on 蒯文武的博客</title>
+    <link>https://kuaiwenwu.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 学习笔记 on 蒯文武的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language>
+    <copyright>版权所有，禁止转载必须注明出处！</copyright>
+    <lastBuildDate>Wed, 10 Apr 2019 17:54:20 +0800</lastBuildDate>
+    
+	<atom:link href="https://kuaiwenwu.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>带你领略Go语言并发奥妙之处</title>
+      <link>https://kuaiwenwu.github.io/featured/01_golesson/</link>
+      <pubDate>Wed, 10 Apr 2019 17:54:20 +0800</pubDate>
+      
+      <guid>https://kuaiwenwu.github.io/featured/01_golesson/</guid>
+      <description> 我们在使用Go语言进行开发时，一般会使用goroutine来处理并发任务。那么大家有没有考虑过goroutine的实现机制是什么样的？很多同学会把goroutine与线程等同起来，但是实际上并不是这样的。在这边文章中，我们将介绍以下内容：  什么是goroutine？ Goroutine与线程的区别 Goroutine是如何调度的  </description>
+    </item>
+    
+    <item>
+      <title>带你领略Go语言并发奥妙之处</title>
+      <link>https://kuaiwenwu.github.io/post/01_golesson/</link>
+      <pubDate>Wed, 10 Apr 2019 17:54:20 +0800</pubDate>
+      
+      <guid>https://kuaiwenwu.github.io/post/01_golesson/</guid>
+      <description> 我们在使用Go语言进行开发时，一般会使用goroutine来处理并发任务。那么大家有没有考虑过goroutine的实现机制是什么样的？很多同学会把goroutine与线程等同起来，但是实际上并不是这样的。在这边文章中，我们将介绍以下内容：  什么是goroutine？ Goroutine与线程的区别 Goroutine是如何调度的  </description>
+    </item>
+    
+    <item>
+      <title>带你领略Go语言并发奥妙之处</title>
+      <link>https://kuaiwenwu.github.io/projects/01_golesson/</link>
+      <pubDate>Wed, 10 Apr 2019 17:54:20 +0800</pubDate>
+      
+      <guid>https://kuaiwenwu.github.io/projects/01_golesson/</guid>
+      <description> 我们在使用Go语言进行开发时，一般会使用goroutine来处理并发任务。那么大家有没有考虑过goroutine的实现机制是什么样的？很多同学会把goroutine与线程等同起来，但是实际上并不是这样的。在这边文章中，我们将介绍以下内容：  什么是goroutine？ Goroutine与线程的区别 Goroutine是如何调度的  </description>
+    </item>
+    
+    <item>
+      <title>带你领略Go语言并发奥妙之处</title>
+      <link>https://kuaiwenwu.github.io/publication/01_golesson/</link>
+      <pubDate>Wed, 10 Apr 2019 17:54:20 +0800</pubDate>
+      
+      <guid>https://kuaiwenwu.github.io/publication/01_golesson/</guid>
+      <description> 我们在使用Go语言进行开发时，一般会使用goroutine来处理并发任务。那么大家有没有考虑过goroutine的实现机制是什么样的？很多同学会把goroutine与线程等同起来，但是实际上并不是这样的。在这边文章中，我们将介绍以下内容：  什么是goroutine？ Goroutine与线程的区别 Goroutine是如何调度的  </description>
+    </item>
+    
+  </channel>
+</rss>

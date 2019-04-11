@@ -3,7 +3,90 @@
     <url>
     
       <loc>https://kuaiwenwu.github.io/categories/</loc>
-      <lastmod>2019-04-10T11:40:26+08:00</lastmod>
+      <lastmod>2019-04-10T17:54:20+08:00</lastmod>
+      <priority>0</priority>
+    </url>
+  
+    <url>
+    
+      <loc>https://kuaiwenwu.github.io/tags/golang/</loc>
+      <lastmod>2019-04-10T17:54:20+08:00</lastmod>
+      <priority>0</priority>
+    </url>
+  
+    <url>
+    
+      <loc>https://kuaiwenwu.github.io/tags/goroutine/</loc>
+      <lastmod>2019-04-10T17:54:20+08:00</lastmod>
+      <priority>0</priority>
+    </url>
+  
+    <url>
+    
+      <loc>https://kuaiwenwu.github.io/featured/</loc>
+      <lastmod>2019-04-10T17:54:20+08:00</lastmod>
+    </url>
+  
+    <url>
+    
+      <loc>https://kuaiwenwu.github.io/post/</loc>
+      <lastmod>2019-04-10T17:54:20+08:00</lastmod>
+    </url>
+  
+    <url>
+    
+      <loc>https://kuaiwenwu.github.io/tags/</loc>
+      <lastmod>2019-04-10T17:54:20+08:00</lastmod>
+      <priority>0</priority>
+    </url>
+  
+    <url>
+    
+      <loc>https://kuaiwenwu.github.io/publication/</loc>
+      <lastmod>2019-04-10T17:54:20+08:00</lastmod>
+    </url>
+  
+    <url>
+    
+      <loc>https://kuaiwenwu.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+      <lastmod>2019-04-10T17:54:20+08:00</lastmod>
+      <priority>0</priority>
+    </url>
+  
+    <url>
+    
+      <loc>https://kuaiwenwu.github.io/projects/</loc>
+      <lastmod>2019-04-10T17:54:20+08:00</lastmod>
+    </url>
+  
+    <url>
+    
+      <loc>https://kuaiwenwu.github.io/featured/01_golesson/</loc>
+      <lastmod>2019-04-10T17:54:20+08:00</lastmod>
+    </url>
+  
+    <url>
+    
+      <loc>https://kuaiwenwu.github.io/post/01_golesson/</loc>
+      <lastmod>2019-04-10T17:54:20+08:00</lastmod>
+    </url>
+  
+    <url>
+    
+      <loc>https://kuaiwenwu.github.io/projects/01_golesson/</loc>
+      <lastmod>2019-04-10T17:54:20+08:00</lastmod>
+    </url>
+  
+    <url>
+    
+      <loc>https://kuaiwenwu.github.io/publication/01_golesson/</loc>
+      <lastmod>2019-04-10T17:54:20+08:00</lastmod>
+    </url>
+  
+    <url>
+    
+      <loc>https://kuaiwenwu.github.io/</loc>
+      <lastmod>2019-04-10T17:54:20+08:00</lastmod>
       <priority>0</priority>
     </url>
   
@@ -29,15 +112,8 @@
   
     <url>
     
-      <loc>https://kuaiwenwu.github.io/post/</loc>
+      <loc>https://kuaiwenwu.github.io/publication/openkm/</loc>
       <lastmod>2019-04-10T11:40:26+08:00</lastmod>
-    </url>
-  
-    <url>
-    
-      <loc>https://kuaiwenwu.github.io/tags/</loc>
-      <lastmod>2019-04-10T11:40:26+08:00</lastmod>
-      <priority>0</priority>
     </url>
   
     <url>
@@ -50,13 +126,6 @@
     <url>
     
       <loc>https://kuaiwenwu.github.io/tags/%E6%96%87%E6%A1%A3%E7%B3%BB%E7%BB%9F/</loc>
-      <lastmod>2019-04-10T11:40:26+08:00</lastmod>
-      <priority>0</priority>
-    </url>
-  
-    <url>
-    
-      <loc>https://kuaiwenwu.github.io/</loc>
       <lastmod>2019-04-10T11:40:26+08:00</lastmod>
       <priority>0</priority>
     </url>
@@ -82,11 +151,6 @@
     
       <loc>https://kuaiwenwu.github.io/publication_types/</loc>
       <priority>0</priority>
-    </url>
-  
-    <url>
-    
-      <loc>https://kuaiwenwu.github.io/publication/</loc>
     </url>
   
     <url>
