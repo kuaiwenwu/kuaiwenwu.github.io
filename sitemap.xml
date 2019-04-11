@@ -2,6 +2,11 @@
   
     <url>
     
+      <loc>https://kuaiwenwu.github.io/contact/contact/</loc>
+    </url>
+  
+    <url>
+    
       <loc>https://kuaiwenwu.github.io/categories/</loc>
       <lastmod>2019-04-10T17:54:20+08:00</lastmod>
       <priority>0</priority>
@@ -144,6 +149,12 @@
     <url>
     
       <loc>https://kuaiwenwu.github.io/author/</loc>
+      <priority>0</priority>
+    </url>
+  
+    <url>
+    
+      <loc>https://kuaiwenwu.github.io/contact/</loc>
       <priority>0</priority>
     </url>
   

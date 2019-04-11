@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Contacts on 蒯文武的博客</title>
+    <link>https://kuaiwenwu.github.io/contact/</link>
+    <description>Recent content in Contacts on 蒯文武的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language>
+    <copyright>kuaiwenwu.github.io © 2019 ·转载须注明出处</copyright>
+    
+	<atom:link href="https://kuaiwenwu.github.io/contact/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>和我联系</title>
+      <link>https://kuaiwenwu.github.io/contact/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kuaiwenwu.github.io/contact/contact/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
