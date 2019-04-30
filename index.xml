@@ -47,15 +47,15 @@
 
 &lt;h4 id=&#34;1-登录rancher的ui-进入需开启podpreset的k8s集群-选择主机-在点击编辑集群按钮&#34;&gt;1.登录rancher的ui，进入需开启PodPreset的K8s集群，选择主机，在点击编辑集群按钮。&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;static/img/rancher_podpreset1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;rancher_podpreset1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;2-再次选择-编辑yml-选项后进行新增参数&#34;&gt;2.再次选择“编辑yml”选项后进行新增参数。&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;static/img/rancher_podpreset2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;rancher_podpreset2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;3-如图所示-在集群的yml中新增红色框标示部分&#34;&gt;3.如图所示，在集群的yml中新增红色框标示部分。&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;static/img/rancher_podpreset3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;rancher_podpreset3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;编辑yml后，需要在kube-api下增加如下三行即可开启podpreset：
 extra_args:

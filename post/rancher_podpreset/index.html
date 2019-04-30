@@ -512,15 +512,15 @@ addon_job_timeout: 30 authentication: strategy: &quot;x509|webhook&quot; bastion
 
 <h4 id="1-登录rancher的ui-进入需开启podpreset的k8s集群-选择主机-在点击编辑集群按钮">1.登录rancher的ui，进入需开启PodPreset的K8s集群，选择主机，在点击编辑集群按钮。</h4>
 
-<p><img src="static/img/rancher_podpreset1.png" alt="" /></p>
+<p><img src="rancher_podpreset1.png" alt="" /></p>
 
 <h4 id="2-再次选择-编辑yml-选项后进行新增参数">2.再次选择“编辑yml”选项后进行新增参数。</h4>
 
-<p><img src="static/img/rancher_podpreset2.png" alt="" /></p>
+<p><img src="rancher_podpreset2.png" alt="" /></p>
 
 <h4 id="3-如图所示-在集群的yml中新增红色框标示部分">3.如图所示，在集群的yml中新增红色框标示部分。</h4>
 
-<p><img src="static/img/rancher_podpreset3.png" alt="" /></p>
+<p><img src="rancher_podpreset3.png" alt="" /></p>
 
 <p>编辑yml后，需要在kube-api下增加如下三行即可开启podpreset：
 extra_args:
