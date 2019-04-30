@@ -19,16 +19,14 @@
     </item>
     
     <item>
-      <title>rancher开启PodPreset实现容器时区同步</title>
+      <title>Rancher开启PodPreset实现容器时区同步</title>
       <link>https://kuaiwenwu.github.io/post/rancher_podpreset/</link>
       <pubDate>Tue, 30 Apr 2019 09:40:26 +0800</pubDate>
       
       <guid>https://kuaiwenwu.github.io/post/rancher_podpreset/</guid>
       <description>
 
-&lt;h1 id=&#34;rancher开启podpreset实现容器时区同步&#34;&gt;rancher开启PodPreset实现容器时区同步&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;通过Pod Preset预设置时区环境变量&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Pod Preset是一种API资源，用来在创建pod时向其注入运行时需要的额外信息，通过使用label selector确定为pod应用那些Presets。&lt;/p&gt;
 
 &lt;h3 id=&#34;k8s激活pod-preset&#34;&gt;&amp;gt;K8S激活Pod Preset&lt;/h3&gt;
 
@@ -36,9 +34,10 @@
 
 &lt;p&gt;编辑/etc/kubernetes/manifests/kube-apiserver.yaml，&lt;/p&gt;
 
-&lt;p&gt;• 在-runtime-config增加settings.k8s.io/v1alpha1=true&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-YML&#34;&gt;• 在-runtime-config增加settings.k8s.io/v1alpha1=true
 
-&lt;p&gt;• 在&amp;ndash;admission-control增加PodPreset`&lt;/p&gt;
+• 在--admission-control增加PodPreset`
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;保存后kubelet会自动重启kube-apiserver组件。&lt;/p&gt;
 
@@ -122,11 +121,26 @@ name: &amp;quot;nyan-k8s-02&amp;quot;
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h5 id=&#34;ps-对于敏感型的kubernetes平台的业务-建议在使用构建kubernetes后及时开启podpreset-否则在线上直接开启-会造成服务的短暂性的中断-请务必慎用&#34;&gt;PS: 对于敏感型的kubernetes平台的业务，建议在使用构建kubernetes后及时开启PodPreset，否则在线上直接开启，会造成服务的短暂性的中断，请务必慎用。&lt;/h5&gt;
+&lt;h3 id=&#34;使用示例-配置podpreset实现只对namespace为epp的容器开启时间同步&#34;&gt;使用示例：配置podpreset实现只对namespace为epp的容器开启时间同步&lt;/h3&gt;
 
-&lt;p&gt;$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-yml&#34;&gt;apiVersion: settings.k8s.io/v1alpha1
+kind: PodPreset
+metadata:
+  name: allow-tz-env
+  namespace: epp
+spec:
+  selector:
+    matchLabels:
+  env:
+    - name: TZ
+      value: Asia/Shanghai
 
-&lt;p&gt;$$&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;就此完成。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-txt&#34;&gt;PS: 对于敏感型的kubernetes平台的业务，建议在使用构建kubernetes后及时开启PodPreset，否则在线上直接开启，会造成服务的短暂性的中断，请务必慎用。
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
