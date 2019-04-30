@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <copyright>kuaiwenwu.github.io © 2019 ·转载须注明出处</copyright>
-    <lastBuildDate>Wed, 10 Apr 2019 17:54:20 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 30 Apr 2019 09:40:26 +0800</lastBuildDate>
     
 	<atom:link href="https://kuaiwenwu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>https://kuaiwenwu.github.io/tags/kubernetes/</link>
+      <pubDate>Tue, 30 Apr 2019 09:40:26 +0800</pubDate>
+      
+      <guid>https://kuaiwenwu.github.io/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PodPreset</title>
+      <link>https://kuaiwenwu.github.io/tags/podpreset/</link>
+      <pubDate>Tue, 30 Apr 2019 09:40:26 +0800</pubDate>
+      
+      <guid>https://kuaiwenwu.github.io/tags/podpreset/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rancher</title>
+      <link>https://kuaiwenwu.github.io/tags/rancher/</link>
+      <pubDate>Tue, 30 Apr 2019 09:40:26 +0800</pubDate>
+      
+      <guid>https://kuaiwenwu.github.io/tags/rancher/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Golang</title>

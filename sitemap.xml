@@ -8,7 +8,61 @@
     <url>
     
       <loc>https://kuaiwenwu.github.io/categories/</loc>
-      <lastmod>2019-04-10T17:54:20+08:00</lastmod>
+      <lastmod>2019-04-30T09:40:26+08:00</lastmod>
+      <priority>0</priority>
+    </url>
+  
+    <url>
+    
+      <loc>https://kuaiwenwu.github.io/tags/kubernetes/</loc>
+      <lastmod>2019-04-30T09:40:26+08:00</lastmod>
+      <priority>0</priority>
+    </url>
+  
+    <url>
+    
+      <loc>https://kuaiwenwu.github.io/tags/podpreset/</loc>
+      <lastmod>2019-04-30T09:40:26+08:00</lastmod>
+      <priority>0</priority>
+    </url>
+  
+    <url>
+    
+      <loc>https://kuaiwenwu.github.io/post/</loc>
+      <lastmod>2019-04-30T09:40:26+08:00</lastmod>
+    </url>
+  
+    <url>
+    
+      <loc>https://kuaiwenwu.github.io/tags/rancher/</loc>
+      <lastmod>2019-04-30T09:40:26+08:00</lastmod>
+      <priority>0</priority>
+    </url>
+  
+    <url>
+    
+      <loc>https://kuaiwenwu.github.io/tags/</loc>
+      <lastmod>2019-04-30T09:40:26+08:00</lastmod>
+      <priority>0</priority>
+    </url>
+  
+    <url>
+    
+      <loc>https://kuaiwenwu.github.io/post/rancher_podpreset/</loc>
+      <lastmod>2019-04-30T09:40:26+08:00</lastmod>
+    </url>
+  
+    <url>
+    
+      <loc>https://kuaiwenwu.github.io/categories/%E5%8E%9F%E5%88%9B%E6%96%87%E7%AB%A0/</loc>
+      <lastmod>2019-04-30T09:40:26+08:00</lastmod>
+      <priority>0</priority>
+    </url>
+  
+    <url>
+    
+      <loc>https://kuaiwenwu.github.io/</loc>
+      <lastmod>2019-04-30T09:40:26+08:00</lastmod>
       <priority>0</priority>
     </url>
   
@@ -30,19 +84,6 @@
     
       <loc>https://kuaiwenwu.github.io/featured/</loc>
       <lastmod>2019-04-10T17:54:20+08:00</lastmod>
-    </url>
-  
-    <url>
-    
-      <loc>https://kuaiwenwu.github.io/post/</loc>
-      <lastmod>2019-04-10T17:54:20+08:00</lastmod>
-    </url>
-  
-    <url>
-    
-      <loc>https://kuaiwenwu.github.io/tags/</loc>
-      <lastmod>2019-04-10T17:54:20+08:00</lastmod>
-      <priority>0</priority>
     </url>
   
     <url>
@@ -90,13 +131,6 @@
   
     <url>
     
-      <loc>https://kuaiwenwu.github.io/</loc>
-      <lastmod>2019-04-10T17:54:20+08:00</lastmod>
-      <priority>0</priority>
-    </url>
-  
-    <url>
-    
       <loc>https://kuaiwenwu.github.io/tags/linux/</loc>
       <lastmod>2019-04-10T11:40:26+08:00</lastmod>
       <priority>0</priority>
@@ -119,13 +153,6 @@
     
       <loc>https://kuaiwenwu.github.io/publication/openkm/</loc>
       <lastmod>2019-04-10T11:40:26+08:00</lastmod>
-    </url>
-  
-    <url>
-    
-      <loc>https://kuaiwenwu.github.io/categories/%E5%8E%9F%E5%88%9B%E6%96%87%E7%AB%A0/</loc>
-      <lastmod>2019-04-10T11:40:26+08:00</lastmod>
-      <priority>0</priority>
     </url>
   
     <url>

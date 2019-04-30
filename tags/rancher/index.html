@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="zh-Hans">
 <head>
@@ -31,7 +33,7 @@
   <meta name="description" content="蒯文武的个人技术博客网站，主要关注服务网格,serverless,kubernetes,微服务等云原生技术。">
 
   
-  <link rel="alternate" hreflang="zh-Hans" href="https://kuaiwenwu.github.io/404.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://kuaiwenwu.github.io/tags/rancher/">
 
   
 
@@ -98,15 +100,15 @@
   
 
   
-  <link rel="alternate" href="https://kuaiwenwu.github.io/index.xml" type="application/rss+xml" title="蒯文武的博客">
-  <link rel="feed" href="https://kuaiwenwu.github.io/index.xml" type="application/rss+xml" title="蒯文武的博客">
+  <link rel="alternate" href="https://kuaiwenwu.github.io/tags/rancher/index.xml" type="application/rss+xml" title="蒯文武的博客">
+  <link rel="feed" href="https://kuaiwenwu.github.io/tags/rancher/index.xml" type="application/rss+xml" title="蒯文武的博客">
   
 
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://kuaiwenwu.github.io/404.html">
+  <link rel="canonical" href="https://kuaiwenwu.github.io/tags/rancher/">
 
   
   
@@ -118,19 +120,19 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="蒯文武的博客">
-  <meta property="og:url" content="https://kuaiwenwu.github.io/404.html">
-  <meta property="og:title" content="404 Page not found | 蒯文武的博客">
+  <meta property="og:url" content="https://kuaiwenwu.github.io/tags/rancher/">
+  <meta property="og:title" content="Rancher | 蒯文武的博客">
   <meta property="og:description" content="蒯文武的个人技术博客网站，主要关注服务网格,serverless,kubernetes,微服务等云原生技术。"><meta property="og:image" content="https://kuaiwenwu.github.io/img/icon-192.png">
   <meta property="og:locale" content="zh-Hans">
   
-  
-  
-
+  <meta property="og:updated_time" content="2019-04-30T09:40:26&#43;08:00">
   
 
   
 
-  <title>404 Page not found | 蒯文武的博客</title>
+  
+
+  <title>Rancher | 蒯文武的博客</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -327,48 +329,62 @@
   </div>
 </nav>
 
-<div class="container">
 
-  <h1>找不到页面</h1>
-  <p>也许你在找？</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
   
   
   
-    <h2>最新</h2>
     
-    <ul>
-      <li><a href="/contact/contact/">和我联系</a></li>
-    </ul>
-    
-    <ul>
-      <li><a href="/post/rancher_podpreset/">rancher开启PodPreset实现容器时区同步</a></li>
-    </ul>
-    
-    <ul>
-      <li><a href="/featured/01_golesson/">带你领略Go语言并发奥妙之处</a></li>
-    </ul>
-    
-    <ul>
-      <li><a href="/post/01_golesson/">带你领略Go语言并发奥妙之处</a></li>
-    </ul>
-    
-    <ul>
-      <li><a href="/projects/01_golesson/">带你领略Go语言并发奥妙之处</a></li>
-    </ul>
-    
-    <ul>
-      <li><a href="/publication/01_golesson/">带你领略Go语言并发奥妙之处</a></li>
-    </ul>
-    
-    <ul>
-      <li><a href="/post/openkm/">OpenKm文档系统安装部署</a></li>
-    </ul>
-    
-    <ul>
-      <li><a href="/publication/openkm/">OpenKm文档系统安装部署</a></li>
-    </ul>
-    
+  
+<div class="universal-wrapper pt-3">
+  <h1 itemprop="name">Rancher</h1>
+
+  
+
+  
+</div>
+
+
+
+<div class="universal-wrapper">
+  
+
+  
+  
+  <div>
+    <h2><a href="/post/rancher_podpreset/">rancher开启PodPreset实现容器时区同步</a></h2>
+    <div class="article-style">
+      
+      rancher开启PodPreset实现容器时区同步 通过Pod Preset预设置时区环境变量
+&gt;K8S激活Pod Preset Pod Preset目前还是alpha阶段，默认是没有激活的，对于手动以及二进制安装的k8s集群可以通过以下步骤激活:
+编辑/etc/kubernetes/manifests/kube-apiserver.yaml，
+• 在-runtime-config增加settings.k8s.io/v1alpha1=true
+• 在&ndash;admission-control增加PodPreset`
+保存后kubelet会自动重启kube-apiserver组件。
+&gt;Rancher 激活Pod Preset 对于通过Rancher构建的kubernetes集群，配置略有区别，则需要通过rancher的ui中进行修改实现：
+1.登录rancher的ui，进入需开启PodPreset的K8s集群，选择主机，在点击编辑集群按钮。 2.再次选择“编辑yml”选项后进行新增参数。 3.如图所示，在集群的yml中新增红色框标示部分。 编辑yml后，需要在kube-api下增加如下三行即可开启podpreset： extra_args: enable-admission-plugins: &ldquo;PodPreset&rdquo; runtime-config: &ldquo;settings.k8s.io/v1alpha1=true&rdquo;
+新增后，保存后集群将重新开始初始化，期间会有短暂的中断，很快自动恢复正常。
+详细代码如下：
+addon_job_timeout: 30 authentication: strategy: &quot;x509|webhook&quot; bastion_host: ssh_agent_auth: false ignore_docker_version: true ingress: provider: &quot;nginx&quot; kubernetes_version: &quot;v1.13.5-rancher1-2&quot; monitoring: provider: &quot;metrics-server&quot; network: options: flannel_backend_type: &quot;vxlan&quot; plugin: &quot;flannel&quot; restore: restore: false services: etcd: backup_config: enabled: true interval_hours: 12 retention: 6 creation: &quot;12h&quot; extra_args: election-timeout: &quot;5000&quot; heartbeat-interval: &quot;500&quot; retention: &quot;72h&quot; snapshot: false kube-api: always_pull_images: false # 在kube-api下增加如下三行即可开启podpreset extra_args: enable-admission-plugins: &quot;PodPreset&quot; runtime-config: &quot;settings.
+      
+    </div>
+  </div>
+  
+
   
 
 </div>
@@ -520,4 +536,6 @@
 
   </body>
 </html>
+
+
 

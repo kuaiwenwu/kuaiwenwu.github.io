@@ -7,10 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <copyright>kuaiwenwu.github.io © 2019 ·转载须注明出处</copyright>
-    <lastBuildDate>Wed, 10 Apr 2019 11:40:26 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 30 Apr 2019 09:40:26 +0800</lastBuildDate>
     
 	<atom:link href="https://kuaiwenwu.github.io/categories/%E5%8E%9F%E5%88%9B%E6%96%87%E7%AB%A0/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>rancher开启PodPreset实现容器时区同步</title>
+      <link>https://kuaiwenwu.github.io/post/rancher_podpreset/</link>
+      <pubDate>Tue, 30 Apr 2019 09:40:26 +0800</pubDate>
+      
+      <guid>https://kuaiwenwu.github.io/post/rancher_podpreset/</guid>
+      <description>rancher开启PodPreset实现容器时区同步 通过Pod Preset预设置时区环境变量
+&amp;gt;K8S激活Pod Preset Pod Preset目前还是alpha阶段，默认是没有激活的，对于手动以及二进制安装的k8s集群可以通过以下步骤激活:
+编辑/etc/kubernetes/manifests/kube-apiserver.yaml，
+• 在-runtime-config增加settings.k8s.io/v1alpha1=true
+• 在&amp;ndash;admission-control增加PodPreset`
+保存后kubelet会自动重启kube-apiserver组件。
+&amp;gt;Rancher 激活Pod Preset 对于通过Rancher构建的kubernetes集群，配置略有区别，则需要通过rancher的ui中进行修改实现：
+1.登录rancher的ui，进入需开启PodPreset的K8s集群，选择主机，在点击编辑集群按钮。 2.再次选择“编辑yml”选项后进行新增参数。 3.如图所示，在集群的yml中新增红色框标示部分。 编辑yml后，需要在kube-api下增加如下三行即可开启podpreset： extra_args: enable-admission-plugins: &amp;ldquo;PodPreset&amp;rdquo; runtime-config: &amp;ldquo;settings.k8s.io/v1alpha1=true&amp;rdquo;
+新增后，保存后集群将重新开始初始化，期间会有短暂的中断，很快自动恢复正常。
+详细代码如下：
+addon_job_timeout: 30 authentication: strategy: &amp;quot;x509|webhook&amp;quot; bastion_host: ssh_agent_auth: false ignore_docker_version: true ingress: provider: &amp;quot;nginx&amp;quot; kubernetes_version: &amp;quot;v1.13.5-rancher1-2&amp;quot; monitoring: provider: &amp;quot;metrics-server&amp;quot; network: options: flannel_backend_type: &amp;quot;vxlan&amp;quot; plugin: &amp;quot;flannel&amp;quot; restore: restore: false services: etcd: backup_config: enabled: true interval_hours: 12 retention: 6 creation: &amp;quot;12h&amp;quot; extra_args: election-timeout: &amp;quot;5000&amp;quot; heartbeat-interval: &amp;quot;500&amp;quot; retention: &amp;quot;72h&amp;quot; snapshot: false kube-api: always_pull_images: false # 在kube-api下增加如下三行即可开启podpreset extra_args: enable-admission-plugins: &amp;quot;PodPreset&amp;quot; runtime-config: &amp;quot;settings.</description>
+    </item>
     
     <item>
       <title>OpenKm文档系统安装部署</title>

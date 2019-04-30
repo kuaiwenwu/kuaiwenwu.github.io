@@ -6,7 +6,7 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>zh-Hans</language>
     <copyright>kuaiwenwu.github.io © 2019 ·转载须注明出处</copyright>
-    <lastBuildDate>Wed, 10 Apr 2019 17:54:20 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 30 Apr 2019 09:40:26 +0800</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
@@ -16,6 +16,118 @@
       
       <guid>https://kuaiwenwu.github.io/contact/contact/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>rancher开启PodPreset实现容器时区同步</title>
+      <link>https://kuaiwenwu.github.io/post/rancher_podpreset/</link>
+      <pubDate>Tue, 30 Apr 2019 09:40:26 +0800</pubDate>
+      
+      <guid>https://kuaiwenwu.github.io/post/rancher_podpreset/</guid>
+      <description>
+
+&lt;h1 id=&#34;rancher开启podpreset实现容器时区同步&#34;&gt;rancher开启PodPreset实现容器时区同步&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;通过Pod Preset预设置时区环境变量&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;k8s激活pod-preset&#34;&gt;&amp;gt;K8S激活Pod Preset&lt;/h3&gt;
+
+&lt;p&gt;Pod Preset目前还是alpha阶段，默认是没有激活的，对于手动以及二进制安装的k8s集群可以通过以下步骤激活:&lt;/p&gt;
+
+&lt;p&gt;编辑/etc/kubernetes/manifests/kube-apiserver.yaml，&lt;/p&gt;
+
+&lt;p&gt;• 在-runtime-config增加settings.k8s.io/v1alpha1=true&lt;/p&gt;
+
+&lt;p&gt;• 在&amp;ndash;admission-control增加PodPreset`&lt;/p&gt;
+
+&lt;p&gt;保存后kubelet会自动重启kube-apiserver组件。&lt;/p&gt;
+
+&lt;h3 id=&#34;rancher-激活pod-preset&#34;&gt;&amp;gt;Rancher 激活Pod Preset&lt;/h3&gt;
+
+&lt;p&gt;对于通过Rancher构建的kubernetes集群，配置略有区别，则需要通过rancher的ui中进行修改实现：&lt;/p&gt;
+
+&lt;h4 id=&#34;1-登录rancher的ui-进入需开启podpreset的k8s集群-选择主机-在点击编辑集群按钮&#34;&gt;1.登录rancher的ui，进入需开启PodPreset的K8s集群，选择主机，在点击编辑集群按钮。&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&#34;static/img/rancher_podpreset1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;2-再次选择-编辑yml-选项后进行新增参数&#34;&gt;2.再次选择“编辑yml”选项后进行新增参数。&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&#34;static/img/rancher_podpreset2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;3-如图所示-在集群的yml中新增红色框标示部分&#34;&gt;3.如图所示，在集群的yml中新增红色框标示部分。&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&#34;static/img/rancher_podpreset3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;编辑yml后，需要在kube-api下增加如下三行即可开启podpreset：
+extra_args:
+      enable-admission-plugins: &amp;ldquo;PodPreset&amp;rdquo;
+      runtime-config: &amp;ldquo;settings.k8s.io/v1alpha1=true&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;新增后，保存后集群将重新开始初始化，期间会有短暂的中断，很快自动恢复正常。&lt;/p&gt;
+
+&lt;p&gt;详细代码如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-yml&#34;&gt;addon_job_timeout: 30
+authentication:
+  strategy: &amp;quot;x509|webhook&amp;quot;
+bastion_host:
+  ssh_agent_auth: false
+ignore_docker_version: true
+
+ingress:
+  provider: &amp;quot;nginx&amp;quot;
+kubernetes_version: &amp;quot;v1.13.5-rancher1-2&amp;quot;
+monitoring:
+  provider: &amp;quot;metrics-server&amp;quot;
+
+network:
+  options:
+    flannel_backend_type: &amp;quot;vxlan&amp;quot;
+  plugin: &amp;quot;flannel&amp;quot;
+restore:
+  restore: false
+services:
+  etcd:
+    backup_config:
+      enabled: true
+      interval_hours: 12
+      retention: 6
+    creation: &amp;quot;12h&amp;quot;
+    extra_args:
+      election-timeout: &amp;quot;5000&amp;quot;
+      heartbeat-interval: &amp;quot;500&amp;quot;
+    retention: &amp;quot;72h&amp;quot;
+    snapshot: false
+  kube-api:
+    always_pull_images: false
+    # 在kube-api下增加如下三行即可开启podpreset
+    extra_args:
+      enable-admission-plugins: &amp;quot;PodPreset&amp;quot;
+      runtime-config: &amp;quot;settings.k8s.io/v1alpha1=true&amp;quot;
+    pod_security_policy: false
+    service_node_port_range: &amp;quot;30000-32767&amp;quot;
+  kubelet:
+    fail_swap_on: false
+ssh_agent_auth: false
+#
+#   # 自定义Rancher参数
+#
+docker_root_dir: &amp;quot;/var/lib/docker&amp;quot;
+enable_cluster_alerting: false
+enable_cluster_monitoring: false
+enable_network_policy: false
+local_cluster_auth_endpoint:
+  enabled: true
+name: &amp;quot;nyan-k8s-02&amp;quot;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;ps-对于敏感型的kubernetes平台的业务-建议在使用构建kubernetes后及时开启podpreset-否则在线上直接开启-会造成服务的短暂性的中断-请务必慎用&#34;&gt;PS: 对于敏感型的kubernetes平台的业务，建议在使用构建kubernetes后及时开启PodPreset，否则在线上直接开启，会造成服务的短暂性的中断，请务必慎用。&lt;/h5&gt;
+
+&lt;p&gt;$$&lt;/p&gt;
+
+&lt;p&gt;$$&lt;/p&gt;
+</description>
     </item>
     
     <item>
